@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    <bean name="termInsurance" class="co.pragra.learning.first_spring_proj.dec14.domain.TermInsurance"></bean>-->
+    <!--    <bean name="autoInsurance" class="co.pragra.learning.first_spring_proj.dec14.domain.AutoInsurance"></bean>-->
+    <!--    <bean name="insuranceService" class="co.pragra.learning.first_spring_proj.dec14.service.BaseInsuranceService">-->
+    <!--        <constructor-arg name="insurance" ref="termInsurance"></constructor-arg>-->
+    <!--    </bean>-->
+
+    <bean name="person" class="co.pragra.learning.first_spring_proj.dec14.domain.Person">
+        <constructor-arg name="firstName" value="Robin"></constructor-arg>
+        <constructor-arg name="age" value="30"></constructor-arg>
+        <constructor-arg name="salary" value="2545.50"></constructor-arg>
+        <property name="hobbies">
+            <list>
+                <value>eating</value>
+                <value>sleeping</value>
+            </list>
+        </property>
+        <property name="scoreCard">
+            <map>
+                <entry key="a" value="gh"></entry>
+                <entry key="b" value="jk"></entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean name="person2"  class="co.pragra.learning.first_spring_proj.dec14.domain.Person">
+        <constructor-arg name="firstName" value="Rob"></constructor-arg>
+        <constructor-arg name="age" value="31"></constructor-arg>
+        <constructor-arg name="salary" value="3545.50"></constructor-arg>
+    </bean>
+
+    <bean name="person3"  class="co.pragra.learning.first_spring_proj.dec14.domain.Person">
+        <constructor-arg name="firstName" value="Rob"></constructor-arg>
+        <constructor-arg name="age" value="31"></constructor-arg>
+        <constructor-arg name="salary" value="3545.50"></constructor-arg>
+    </bean>
+
+</beans>
