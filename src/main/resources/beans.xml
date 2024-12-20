@@ -3,11 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--    <bean name="termInsurance" class="co.pragra.learning.first_spring_proj.dec14.domain.TermInsurance"></bean>-->
-    <!--    <bean name="autoInsurance" class="co.pragra.learning.first_spring_proj.dec14.domain.AutoInsurance"></bean>-->
-    <!--    <bean name="insuranceService" class="co.pragra.learning.first_spring_proj.dec14.service.BaseInsuranceService">-->
-    <!--        <constructor-arg name="insurance" ref="termInsurance"></constructor-arg>-->
-    <!--    </bean>-->
+
+    <bean name="dbConnection" class="co.pragra.learning.first_spring_proj.MyHibernate" init-method="postInit" destroy-method="preDestroy">
+        <property name="databaseName" value="MySQL"></property>
+        <property name="jdbcUrl" value="jdbc:mysql.cj.jdbc.driver:localhost:3306:appDb"></property>
+    </bean>
 
     <bean name="person" class="co.pragra.learning.first_spring_proj.dec14.domain.Person">
         <constructor-arg name="firstName" value="Robin"></constructor-arg>
@@ -27,16 +27,48 @@
         </property>
     </bean>
 
-    <bean name="person2"  class="co.pragra.learning.first_spring_proj.dec14.domain.Person">
+    <bean name="person2" class="co.pragra.learning.first_spring_proj.dec14.domain.Person">
         <constructor-arg name="firstName" value="Rob"></constructor-arg>
         <constructor-arg name="age" value="31"></constructor-arg>
         <constructor-arg name="salary" value="3545.50"></constructor-arg>
     </bean>
 
-    <bean name="person3"  class="co.pragra.learning.first_spring_proj.dec14.domain.Person">
+    <bean name="person3" class="co.pragra.learning.first_spring_proj.dec14.domain.Person">
         <constructor-arg name="firstName" value="Rob"></constructor-arg>
         <constructor-arg name="age" value="31"></constructor-arg>
         <constructor-arg name="salary" value="3545.50"></constructor-arg>
     </bean>
+
+    <bean name="bmwm3" class="co.pragra.learning.first_spring_proj.BMWM3">
+        <constructor-arg name="carName" value="m3"></constructor-arg>
+        <constructor-arg name="engine" ref="petrolEngine"></constructor-arg>
+        <constructor-arg name="features">
+            <list>
+                <value>Moon roof</value>
+                <value>Turbo charged</value>
+                <value>Auto Starter</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg name="modelPrice">
+            <map>
+                <entry key="m3" value="50000"></entry>
+                <entry key="m4" value="60000"></entry>
+                <entry key="m5" value="70000"></entry>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean name="petrolEngine" class="co.pragra.learning.first_spring_proj.PetrolEngine">
+
+    </bean>
+
+    <!--    <bean name="bmwm4" class="co.pragra.learning.first_spring_proj.BMWM3">-->
+    <!--        <constructor-arg name="carName" value="m4"></constructor-arg>-->
+    <!--        <constructor-arg name="engine" ref="dieselEngine"></constructor-arg>-->
+    <!--    </bean>-->
+
+    <!--    <bean name="dieselEngine" class="co.pragra.learning.first_spring_proj.DieselEngine">-->
+
+    <!--    </bean>-->
 
 </beans>

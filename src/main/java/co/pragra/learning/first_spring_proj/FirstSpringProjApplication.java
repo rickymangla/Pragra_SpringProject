@@ -33,8 +33,26 @@ public class FirstSpringProjApplication {
         System.out.println("personNew = " + personNew);
 
         ApplicationContext context1 = new ClassPathXmlApplicationContext("beans.xml");
-        Person person2 = context1.getBean(Person.class);
+        Person person2 = context1.getBean("person3", Person.class);
         System.out.println("person2 = " + person2);
+
+//        BMWM3 bm = new BMWM3(new DieselEngine(), "m3");
+//        bm.print(bm);
+        // System.out.println("bm = " + bm);
+
+        BMWM3 bmwm3 = context1.getBean("bmwm3", BMWM3.class);
+        bmwm3.print(bmwm3);
+
+//        BMWM3 bmwm4=context1.getBean("bmwm4",BMWM3.class);
+//        bmwm4.print(bmwm4);
+
+        MyHibernate hibernate = context1.getBean("dbConnection", MyHibernate.class);
+        System.out.println(hibernate);
+        hibernate.postInit();
+
+        BMWM3 bmwm3New = contextNew.getBean("bmwm3", BMWM3.class);
+        System.out.println("bmwm3New = " + bmwm3New);
+
 
     }
 
