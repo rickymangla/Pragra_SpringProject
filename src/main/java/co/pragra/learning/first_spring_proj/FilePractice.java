@@ -39,16 +39,8 @@ class FileWritePractice {
         FileWriter f = null;
         FileReader fr = null;
         try {
-            //   f1 = new File("D:\\Pragra_Java_Material\\test1.txt");
             f = new FileWriter("D:\\Pragra_Java_Material\\test1.txt");
-            // f = new FileWriter("D:\\Pragra_Java_Material\\test.txt");
             f.write("this is for testing purpose");
-            //            fr = new FileReader("D:\\Pragra_Java_Material\\test1.txt");
-            //            int c;
-            //            while ((c=fr.read()) != -1) {
-            //                char ch = (char) c;
-            //                System.out.println(ch);
-            //            }
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -85,88 +77,88 @@ class DirectoryPractice {
     public static void main(String[] args) {
 
         //  InputStreamReader cin = null;
-        Scanner sc = null;
-        try {
-            //   cin = new InputStreamReader(System.in);
-            sc = new Scanner(System.in);
-            // System.out.println("Enter character q to quit");
-            char c;
-            do {
-                System.out.println("Enter character q to quit");
-                // c = (char) cin.read();
-                c = sc.next().charAt(0);
-                System.out.println(c);
-            }
-            while (c != 'q');
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                sc.close();
-                //cin.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
+//        Scanner sc = null;
+//        try {
+//            //   cin = new InputStreamReader(System.in);
+//            sc = new Scanner(System.in);
+//            // System.out.println("Enter character q to quit");
+//            char c;
+//            do {
+//                System.out.println("Enter character q to quit");
+//                // c = (char) cin.read();
+//                c = sc.next().charAt(0);
+//                System.out.println(c);
+//            }
+//            while (c != 'q');
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        } finally {
+//            try {
+//                sc.close();
+//                //cin.close();
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
 
-        //        File f = null;
-        //        FileInputStream fis = null;
-        //        FileOutputStream fos = null;
-        //        FileWriter fw = null;
-        //        try {
-        //            f = new File("D:\\Pragra_Java_Material\\test.txt");
-        //            fw = new FileWriter(f);
-        //            fw.write("this is sample file");
-        //        } catch (Exception e) {
-        //            e.printStackTrace();
-        //        } finally {
-        //            try {
-        //                fw.close();
-        //            } catch (Exception e) {
-        //                e.printStackTrace();
-        //            }
-        //        }
-        //        try {
-        //            fis = new FileInputStream("D:\\Pragra_Java_Material\\test.txt");
-        //            fos = new FileOutputStream("D:\\Pragra_Java_Material\\test1.txt");
-        //            int c;
-        //            while ((c = fis.read()) != -1) {
-        //                fos.write(c);
-        //            }
-        //        } catch (Exception e) {
-        //            e.printStackTrace();
-        //        } finally {
-        //            try {
-        //                fis.close();
-        //                fos.close();
-        //            } catch (Exception e) {
-        //                e.printStackTrace();
-        //            }
-        //        }
+                File f = null;
+                FileInputStream fis = null;
+                FileOutputStream fos = null;
+                FileWriter fw = null;
+                try {
+                    f = new File("D:\\Pragra_Java_Material\\test.txt");
+                    fw = new FileWriter(f);
+                    fw.write("this is sample file for testing only");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    try {
+                        fw.close();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+                try {
+                    fis = new FileInputStream("D:\\Pragra_Java_Material\\test.txt");
+                    fos = new FileOutputStream("D:\\Pragra_Java_Material\\test1.txt");
+                    int c;
+                    while ((c = fis.read()) != -1) {
+                        fos.write(c);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    try {
+                        fis.close();
+                        fos.close();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
 
 
-        //        try {
-        //            f=new File("D:\\Pragra_Java_Material\\test.txt");
-        //            fw = new FileWriter(f);
-        //          //  fis = new FileInputStream(f);
-        //          //  fos = new FileOutputStream("D:\\Pragra_Java_Material\\test1.txt");
-        //            try {
-        //                fw.write("this is for testing purpose only");
-        //                fis = new FileInputStream(f);
-        //                int c;
-        //                while ((c = fis.read()) != -1) {
-        //                    fos.write(c);
-        //                }
-        //
-        //            } finally {
-        //                fw.close();
-        //                fis.close();
-        //                fos.close();
-        //            }
-        //
-        //        } catch (Exception e) {
-        //            e.printStackTrace();
-        //        }
+//                try {
+//                    f=new File("D:\\Pragra_Java_Material\\test.txt");
+//                    fw = new FileWriter(f);
+//                  //  fis = new FileInputStream(f);
+//                  //  fos = new FileOutputStream("D:\\Pragra_Java_Material\\test1.txt");
+//                    try {
+//                        fw.write("this is for testing purpose only");
+//                        fis = new FileInputStream(f);
+//                        int c;
+//                        while ((c = fis.read()) != -1) {
+//                            fos.write(c);
+//                        }
+//
+//                    } finally {
+//                        fw.close();
+//                        fis.close();
+//                        fos.close();
+//                    }
+//
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
 
 
         //        File f4 = new File("/tmp/user/java/bin");
