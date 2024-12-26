@@ -2,6 +2,7 @@ package co.pragra.learning.first_spring_proj;
 
 import co.pragra.learning.first_spring_proj.dec14.conf.ApplicationConfig;
 import co.pragra.learning.first_spring_proj.dec14.domain.Person;
+import co.pragra.learning.first_spring_proj.dec22.Employee;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -10,6 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 
 //@SpringBootApplication
@@ -52,6 +54,24 @@ public class FirstSpringProjApplication {
 
         BMWM3 bmwm3New = contextNew.getBean("bmwm3", BMWM3.class);
         System.out.println("bmwm3New = " + bmwm3New);
+
+        Student stu = contextNew.getBean("student", Student.class);
+        System.out.println("stu = " + stu);
+
+//        Map<Employee, Integer> m = new HashMap<>();
+//        Employee emp1 = new Employee("amit", "mechanical", 101);
+//        Employee emp2 = new Employee("amit", "mechanical", 101);
+//
+//        m.put(emp1, 1);
+//        m.put(emp2, 2);
+//        System.out.println("emp1 hashcode is: " + emp1.hashCode());
+//        System.out.println("emp2 hashcode is: " + emp2.hashCode());
+//
+//        System.out.println("emp1 comparison with emp2 is: " + emp1.equals(emp2));
+//
+//        System.out.println("map results are: " + m);
+//        System.out.println("first employee value is: " + m.get(emp1));
+//        System.out.println("second employee value is: " + m.get(emp2));
 
 
     }

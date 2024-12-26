@@ -25,6 +25,10 @@ public class BMWM3 {
         System.out.println(bmwm3);
     }
 
+    public void postInit() {
+        System.out.println("this method will be invoked once");
+    }
+
     @Override
     public String toString() {
         return "BMWM3{" +

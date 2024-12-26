@@ -2,6 +2,7 @@ package co.pragra.learning.first_spring_proj.dec14.conf;
 
 import co.pragra.learning.first_spring_proj.BMWM3;
 import co.pragra.learning.first_spring_proj.PetrolEngine;
+import co.pragra.learning.first_spring_proj.Student;
 import co.pragra.learning.first_spring_proj.dec14.domain.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,7 +30,7 @@ public class ApplicationConfig {
         return scoreCard;
     }
 
-    @Bean
+    @Bean(initMethod = "postInit")
     @Scope(value = "prototype")
     BMWM3 bmwm3() {
         Map<String,Double>priceModel=new HashMap<>();
@@ -37,5 +38,10 @@ public class ApplicationConfig {
         priceModel.put("m3",60000.0);
         priceModel.put("m4",70000.0);
         return new BMWM3(new PetrolEngine(),"m3",Arrays.asList("auto park","4WD"),priceModel);
+    }
+
+    @Bean
+    Student student() {
+        return new Student();
     }
 }
