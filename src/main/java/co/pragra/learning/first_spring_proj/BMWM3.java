@@ -1,5 +1,8 @@
 package co.pragra.learning.first_spring_proj;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+
 import java.util.List;
 import java.util.Map;
 
@@ -16,17 +19,18 @@ public class BMWM3 {
         this.modelPrice = modelPrice;
     }
 
-//    public BMWM3(IEngine engine, String carName) {
-//        this.engine = engine;
-//        this.carName = carName;
-//    }
-
     public void print(BMWM3 bmwm3) {
         System.out.println(bmwm3);
     }
 
+    @PostConstruct
     public void postInit() {
         System.out.println("this method will be invoked once");
+    }
+
+    @PreDestroy
+    public void preDestroy() {
+        System.out.println("this is called to destroy the bean");
     }
 
     @Override
@@ -38,11 +42,5 @@ public class BMWM3 {
                 ", modelPrice=" + modelPrice +
                 '}';
     }
-//    @Override
-//    public String toString() {
-//        return "BMWM3{" +
-//                "engine=" + engine +
-//                ", carName='" + carName + '\'' +
-//                '}';
-//    }
+
 }

@@ -1,6 +1,7 @@
 package co.pragra.learning.first_spring_proj.dec14.conf;
 
 import co.pragra.learning.first_spring_proj.BMWM3;
+import co.pragra.learning.first_spring_proj.IEngine;
 import co.pragra.learning.first_spring_proj.PetrolEngine;
 import co.pragra.learning.first_spring_proj.Student;
 import co.pragra.learning.first_spring_proj.dec14.domain.Person;
@@ -30,14 +31,19 @@ public class ApplicationConfig {
         return scoreCard;
     }
 
-    @Bean(initMethod = "postInit")
-    @Scope(value = "prototype")
+    @Bean
+        //@Scope(value = "prototype")
     BMWM3 bmwm3() {
-        Map<String,Double>priceModel=new HashMap<>();
-        priceModel.put("m2",50000.0);
-        priceModel.put("m3",60000.0);
-        priceModel.put("m4",70000.0);
-        return new BMWM3(new PetrolEngine(),"m3",Arrays.asList("auto park","4WD"),priceModel);
+        Map<String, Double> priceModel = new HashMap<>();
+        priceModel.put("m2", 50000.0);
+        priceModel.put("m3", 60000.0);
+        priceModel.put("m4", 70000.0);
+        return new BMWM3(engine(), "m3", Arrays.asList("auto park", "4WD"), priceModel);
+    }
+
+ //   @Bean
+    IEngine engine() {
+        return new PetrolEngine();
     }
 
     @Bean

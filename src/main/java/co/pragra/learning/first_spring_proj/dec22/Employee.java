@@ -1,13 +1,14 @@
 package co.pragra.learning.first_spring_proj.dec22;
 
+
 import java.util.Objects;
 
-public final class Employee {
-    final String empName;
-    final String empDept;
-    final int empId;
+public class Employee {
+    String empName;
+    String empDept;
+    int empId;
 
-    final PhoneNumber phoneNumber;
+    PhoneNumber phoneNumber;
 
 //    String value;
 
@@ -28,6 +29,13 @@ public final class Employee {
         this.empId = empId;
         this.phoneNumber = phoneNumber;
     }
+
+    public Employee(String empName, String empDept, int empId) {
+        this.empName = empName;
+        this.empDept = empDept;
+        this.empId = empId;
+    }
+
 
 //    @Override
 //    public boolean equals(Object o) {
@@ -62,15 +70,11 @@ public final class Employee {
     }
 
     public PhoneNumber getPhoneNumber() {
-     PhoneNumber ph1=new PhoneNumber(phoneNumber.phNumber);
+        PhoneNumber ph1 = new PhoneNumber(phoneNumber.phNumber);
 //        return phoneNumber;
         return ph1;
     }
 
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(empName, empDept, empId);
-//    }
 
 //    public void setEmpId(int empId) {
 //        this.empId = empId;
@@ -103,4 +107,5 @@ public final class Employee {
                 ", phoneNumber=" + phoneNumber +
                 '}';
     }
+
 }
