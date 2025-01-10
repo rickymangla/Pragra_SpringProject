@@ -2,8 +2,8 @@ package co.pragra.learning.first_spring_proj;
 
 import co.pragra.learning.first_spring_proj.dec14.conf.ApplicationConfig;
 import co.pragra.learning.first_spring_proj.dec14.domain.Person;
-import co.pragra.learning.first_spring_proj.dec22.Employee;
 //import co.pragra.learning.first_spring_proj.dec22.EmployeeNew;
+import co.pragra.learning.first_spring_proj.dec22.Employee;
 import co.pragra.learning.first_spring_proj.dec22.PhoneNumber;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -140,6 +140,8 @@ public class FirstSpringProjApplication {
 //        for (Employee e : employees) {
 //            System.out.println(e);
 //        }
+        co.pragra.learning.first_spring_proj.Employee employee = context.getBean(co.pragra.learning.first_spring_proj.Employee.class);
+        System.out.println("employee = " + employee);
     }
 
 //    @GetMapping("/api/person")
@@ -147,4 +149,6 @@ public class FirstSpringProjApplication {
 //        return Collections.singletonMap("name","Robin");
 //    }
 
+
 }
+

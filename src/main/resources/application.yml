@@ -1,0 +1,25 @@
+#spring.application.name=first-spring-proj
+#stuName=amit
+#stuDept=mechanical
+#stuAge=25
+#server.port=8081
+
+
+spring:
+  application:
+    name: first-spring-proj
+
+server:
+  port: 8081
+
+#empName: amit
+stuName: rahul
+stuDept: mechanical
+stuAge: 25
+
+emp:
+  empName: amit
+  id: 23
+  salary: 2500.50
+  dept: mechanical
+  number: 9872831689

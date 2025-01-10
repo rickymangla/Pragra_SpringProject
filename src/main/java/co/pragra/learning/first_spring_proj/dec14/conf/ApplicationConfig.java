@@ -1,9 +1,6 @@
 package co.pragra.learning.first_spring_proj.dec14.conf;
 
-import co.pragra.learning.first_spring_proj.BMWM3;
-import co.pragra.learning.first_spring_proj.IEngine;
-import co.pragra.learning.first_spring_proj.PetrolEngine;
-import co.pragra.learning.first_spring_proj.Student;
+import co.pragra.learning.first_spring_proj.*;
 import co.pragra.learning.first_spring_proj.dec14.domain.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -41,7 +38,7 @@ public class ApplicationConfig {
         return new BMWM3(engine(), "m3", Arrays.asList("auto park", "4WD"), priceModel);
     }
 
- //   @Bean
+    @Bean
     IEngine engine() {
         return new PetrolEngine();
     }
@@ -50,4 +47,9 @@ public class ApplicationConfig {
     Student student() {
         return new Student();
     }
+
+//    @Bean
+//    PhoneNumber phoneNumber() {
+//        return new PhoneNumber();
+//    }
 }
